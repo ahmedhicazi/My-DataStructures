@@ -2,50 +2,33 @@
 
 template <class T>
 
-class node
-{
-
-
+class node {
 public:
-
 	T Data;
 	node* Next;
-
-
 };
 
 template <class T>
-
-
-class Stack
-{
-
+class Stack {
 	node<T>* Head;
-
 public:
-
 	Stack()
 	{
 		Head = NULL;
 	}
 
-	bool IsEmpty()
-	{
+	bool IsEmpty()	{
 		return (Head == NULL);
 	}
 
-
-	T Top()
-	{
+	T Top() {
 		if (Head == NULL) return IsEmpty();
 
 		return (Head->Data);
 	}
 
-	void Push(T Data)
-	{
+	void Push(T Data) {
 		node<T>* new_node = new node<T>();
-
 
 		new_node->Data = Data;
 		new_node->Next = Head;
@@ -61,15 +44,10 @@ public:
 		delete Current;
 	}
 
-	~Stack()
-	{
-		while (Head != NULL)
-		{
+	~Stack() {
+		while (Head != NULL) {
 			Pop();
 		}
-
 	}
-
-
 };
 
