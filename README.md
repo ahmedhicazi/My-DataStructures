@@ -1,180 +1,273 @@
-# My-DataStructures
+# 🚀 My-DataStructures
 
-مشروع شامل لتطبيق بنية البيانات والخوارزميات المختلفة باستخدام لغة C++
+**A Personal C++ Project Featuring Custom Data Structures, Classes, and Utility Libraries.**
 
-## 📁 الملفات والمكتبات الموجودة
+## 📖 About The Project
 
-### 1. **MyLib.h** - مكتبة شاملة للدوال المساعدة
-أكبر ملف في المشروع (38KB) يحتوي على:
-- **Reader Namespace**: دوال قراءة المدخلات
-  - `ReadPositiveNumber()` - قراءة رقم موجب
-  - `ReadIntOnly()` - قراءة أعداد صحيحة فقط
-  - `ReadFile()` - قراءة محتويات ملف
+My-DataStructures is a personal project I started during my early journey in learning C++.
 
-- **stringFunc Namespace**: معالجة النصوص
-  - تحويل حالة الأحرف (uppercase/lowercase)
-  - عكس النصوص والكلمات
-  - تقسيم النصوص إلى كلمات
-  - البحث والاستبدال في النصوص
-  - تقليل المسافات الزائدة (Trim)
+I created this project as a practical way to strengthen my programming skills, improve my problem-solving abilities, and apply the concepts I was learning.
 
-- **Random Namespace**: تو��يد أرقام عشوائية
+Throughout my learning journey, I developed various custom classes and utility functions, gradually expanding the project with different implementations.
 
-- **Math Namespace**: عمليات رياضية
-  - Round, Floor, Ceil
-  - عكس الأرقام
-  - فحص الأرقام المتناظرة (Palindrome)
+One of the main goals was to build data structures from scratch rather than simply using existing implementations. I wanted to understand how they work internally, how they manage memory, and how their operations are implemented.
 
-- **Array Namespace**: عمليات على المصفوفات
-  - البحث عن أكبر/أصغر عنصر
-  - ملء المصفوفات بأرقام عشوائية
-  - طباعة المصفوفات والمصفوفات ثنائية الأبعاد
-  - عمليات على المصفوفات ثنائية الأبعاد (البحث، العد، الجمع)
+**Everything in this project was developed by me as part of my learning journey and continuous effort to improve my programming skills.**
 
-- **Recursion Namespace**: دوال عودية
-  - حساب العاملي (Factorial)
-  - حساب الأس (Power)
-  - سلسلة فيبوناتشي (Fibonacci)
+---
 
-- **Info Namespace**: معلومات النظام والبيانات
-  - معلومات نسخة C++
-  - عرض حدود أنواع البيانات
-  - التعامل مع المؤشرات (Pointers)
-  - المصفوفات الديناميكية
-  - المتكررات (Iterators)
-  - كائنات String
-  - هياكل البيانات (Queue, LinkedList, Map, Union)
-  - البرامج كلاسية (Classes) والوراثة
+## 🏗️ Data Structures
 
-- **Date Namespace**: عمليات على التواريخ
-  - التحقق من السنوات الكبيسة
-  - حساب عدد الأيام/الساعات/الدقائق/الثواني
-  - تحديد يوم الأسبوع
-  - حساب فترات الإجازة
+A major part of this project focuses on implementing fundamental data structures from scratch using C++.
 
-- **file Namespace**: العمل مع الملفات
-  - قراءة الملفات
-  - الكتابة إلى الملفات
-  - تحميل البيانات من ملف إلى Vector
-  - حفظ Vector في ملف
+### 1. Dynamic Array
+**File:** `DynamicArray.h`
 
-### 2. **DblLinkedList.h** - قائمة مرتبطة ثنائية الاتجاه
-قالب عام (Template) يوفر:
-- **الإدراج**: في البداية، بعد عقدة معينة، في النهاية
-- **الحذف**: عقدة محددة، أول/آخر عقدة، مسح القائمة بالكامل
-- **البحث والتنقل**: البحث عن عنصر، الحصول على عقدة بالفهرس
-- **تعديل**: تحديث قيمة عنصر
-- **عكس**: عكس ترتيب القائمة
-- **معلومات**: حجم القائمة، التحقق من الفراغ
+A custom generic Dynamic Array implementation using C++ Templates and dynamic memory allocation.
 
-### 3. **DynamicArray.h** - مصفوفة ديناميكية
-قالب عام يسمح بـ:
-- **تغيير الحجم**: إعادة تحجيم المصفوفة ديناميكياً
-- **الإدراج/الحذف**: إضافة/حذف عناصر في أي موضع
-- **البحث**: العثور على عنصر
-- **عكس**: عكس ترتيب العناصر
-- **تنظيف**: مسح جميع العناصر
-- **المؤشرات**: استخدام operator[] للوصول السريع
+The implementation provides operations for managing and manipulating array elements.
 
-### 4. **LinkedList.h** - قائمة مرتبطة أحادية الاتجاه
-قائمة مرتبطة بسيطة (Single Linked List)
+**Implemented Operations:**
+- `SetItem()` – Update an element at a specific index.
+- `GetItem()` – Retrieve an element.
+- `Resize()` – Change the array size.
+- `InsertAt()` – Insert an element at a specific position.
+- `DeleteItemAt()` – Remove an element.
+- `Find()` – Search for an element.
+- `Reverse()` – Reverse the array.
+- `Clear()` – Remove all elements.
+- `Size()` – Get the array size.
+- `IsEmpty()` – Check whether the array is empty.
+- `Print()` – Display array elements.
 
-### 5. **MyQueue.h** - طابور (Queue)
-تطبيق طابور بنسخة مرتبطة (Linked List Based)
+### 2. Doubly Linked List
+**File:** `DblLinkedList.h`
 
-### 6. **MyQueueArr.h** - طابور قائم على المصفوفة
-تطبيق طابور باستخدام مصفوفة دينامية
+A generic Doubly Linked List implemented using C++ Templates.
 
-### 7. **MyStack.h** - كومة (Stack)
-تطبيق كومة بنسخة مرتبطة
+Each node stores a value and two pointers:
+- `next` – Points to the next node.
+- `prev` – Points to the previous node.
 
-### 8. **MyStackArr.h** - كومة قائمة على المصفوفة
-تطبيق كومة باستخدام مصفوفة
+**Implemented Operations:**
+- Insert at the beginning.
+- Insert at the end.
+- Insert after a specific node.
+- Delete a specific node.
+- Delete the first node.
+- Delete the last node.
+- Find an element.
+- Get a node by index.
+- Get an item by index.
+- Update an element.
+- Reverse the list.
+- Clear the list.
+- Get the list size.
+- Check whether the list is empty.
+- Print the list.
 
-### 9. **QueueLine.h** - طابور متقدم
-تطبيق متقدم للطوابير مع ميزات إضافية
+### 3. Linked List-Based Stack
+**File:** `LinkedList.h`
 
-### 10. **MyString.h** - فئة String مخصصة
-فئة خاصة للتعامل مع النصوص
+A custom Stack implementation built using linked nodes.
 
-### 11. **clsString.h** - فئة معالجة النصوص المتقدمة
-فئة متقدمة لعمليات معقدة على النصوص
+The implementation uses dynamically allocated nodes to store elements and maintain the Stack structure.
 
-### 12. **clsInputValidate.h** - التحقق من صحة المدخلات
-دوال للتحقق من صحة إدخالات المستخدم
+**Implemented Operations:**
+- `Push()` – Add an element to the top.
+- `Pop()` – Remove the top element.
+- `Top()` – Retrieve the top element.
+- `IsEmpty()` – Check whether the Stack is empty.
 
-### 13. **clsInputValidate2.h** - نسخة متقدمة من التحقق
-إصدار محسّن من التحقق من المدخلات
+### 4. Queue
+**File:** `MyQueue.h`
 
-### 14. **clsUtil.h** - دوال مساعدة عامة
-مساعدات عامة للبرنامج
+A generic Queue implementation built on top of the custom Doubly Linked List.
 
-## ⚙️ الميزات الرئيسية
+It follows the FIFO (First In, First Out) principle.
 
-✅ **تطبيقات كاملة لبنى البيانات الأساسية**
-- قوائم مرتبطة (Single & Double)
-- مصفوفات ديناميكية
-- طوابير (FIFO)
-- كومات (LIFO)
+**Implemented Operations:**
+- `push()` – Add an element to the queue.
+- `pop()` – Remove an element.
+- `front()` – Retrieve the first element.
+- `back()` – Retrieve the last element.
+- `IsEmpty()` – Check whether the queue is empty.
+- `Size()` – Get the number of elements.
 
-✅ **معالجة متقدمة للنصوص والبيانات**
-- دوال شاملة للعمل مع النصوص
-- تحويل الحالات
-- البحث والاستبدال
-- تقسيم والعمليات المختلفة
+### 5. Array-Based Queue
+**File:** `MyQueueArr.h`
 
-✅ **قوالب عامة (Templates)**
-- استخدام generic programming لإعادة استخدام الكود
-- دعم أنواع بيانات مختلفة
+An alternative Queue implementation that uses the custom Dynamic Array.
 
-✅ **معالجة التواريخ**
-- حسابات معقدة على التواريخ
-- فحص السنوات الكبيسة
-- حساب الإجازات والعطل
+This implementation provides another approach to building the same data structure using a different underlying structure.
 
-✅ **معالجة الملفات**
-- قراءة وكتابة الملفات
-- نقل البيانات بين المتجهات والملفات
+### 6. Stack
+**File:** `MyStack.h`
 
-✅ **برمجة موجهة للكائنات**
-- فئات ووراثة
-- بناءات (Constructors) وهدامات (Destructors)
-- مبادئ OOP المتقدمة
+A generic Stack implementation built on top of the custom Queue class.
 
-## 🔧 الاستخدام
+It follows the LIFO (Last In, First Out) principle.
 
-```cpp
-#include "DblLinkedList.h"
-#include "DynamicArray.h"
-#include "MyLib.h"
+**Implemented Operations:**
+- `push()` – Add an element to the top.
+- `top()` – Retrieve the top element.
+- `bottom()` – Retrieve the bottom element.
 
-int main() {
-    // استخدام القائمة المرتبطة
-    DblLinkedList<int> list;
-    list.InsertAtBeginning(10);
-    list.InsertAtEnd(20);
-    list.PrintList();
-    
-    // استخدام المصفوفة الديناميكية
-    DynamicArray<int> arr(5);
-    arr.SetItem(0, 100);
-    arr.Print();
-    
-    return 0;
-}
-```
+### 7. Array-Based Stack
+**File:** `MyStackArr.h`
 
-## 📝 ملاحظات
+An alternative Stack implementation based on the custom Array-Based Queue.
 
-- جميع الملفات مكتوبة بـ C++
-- تم استخدام `#pragma once` لحماية الرؤوس
-- المشروع يستخدم `std` namespace
-- تم تطبيق أفضل الممارسات البرمجية
+It provides another implementation approach while reusing the project's own data structures.
 
-## 🎓 الفائدة التعليمية
+### 8. Queue Line
+**File:** `QueueLine.h`
 
-هذا المشروع مفيد جداً لـ:
-- تعلم بنى البيانات بعمق
-- فهم كيفية عمل البنى الأساسية
-- تحسين مهارات C++ المتقدمة
-- تطبيق مبادئ البرمجة كائنية التوجه
+A custom implementation for managing waiting lines using Queue concepts.
+
+---
+
+## 🧩 Custom Classes
+
+In addition to data structures, this project contains several custom classes developed to practice Object-Oriented Programming and build reusable components.
+
+### 1. MyString
+**File:** `MyString.h`
+
+A custom String class that implements Undo and Redo functionality.
+
+It maintains two stacks to keep track of previous and undone string values.
+
+**Implemented Operations:**
+- `setValue()` – Update the current string while saving its previous value.
+- `getValue()` – Retrieve the current string.
+- `Undo()` – Restore a previous string value.
+- `Redo()` – Restore an undone change.
+
+This implementation demonstrates how Stack data structures can be used to manage operation history.
+
+### 2. clsString
+**File:** `clsString.h`
+
+A custom String utility class containing a collection of string manipulation and processing operations.
+
+It provides reusable functionality for working with text and performing different string-related tasks.
+
+### 3. clsDate
+**File:** `clsDate.h`
+
+A custom Date class developed to handle date-related operations and calculations.
+
+This is one of the larger classes in the project, containing an extensive implementation dedicated to working with dates.
+
+### 4. clsInputValidate
+**File:** `clsInputValidate.h`
+
+A class dedicated to validating user input and ensuring that entered values meet specific conditions.
+
+**Implemented Functionality:**
+- Check whether numbers fall within a specific range.
+- Validate dates.
+- Check whether a date falls within a given date range.
+- Read and validate integer input.
+- Read and validate floating-point numbers.
+- Read and validate double values.
+- Read numbers within specified ranges.
+- Read string input.
+- Handle invalid numeric input and request valid input again.
+
+### 5. clsInputValidate2
+**File:** `clsInputValidate2.h`
+
+An additional input validation implementation developed to work with different input validation scenarios.
+
+### 6. clsUtil
+**File:** `clsUtil.h`
+
+A general-purpose utility class containing reusable helper functions.
+
+Its functionality includes random number generation, random character generation, and other general utility operations.
+
+---
+
+## 🧰 Utility Library
+
+### MyLib
+**File:** `MyLib.h`
+
+A collection of utility functions organized into namespaces.
+
+It covers several areas of programming, including:
+
+- String manipulation.
+- Array operations.
+- Mathematical functions.
+- Random number generation.
+- Recursion.
+- Date operations.
+- File handling.
+- Input reading.
+
+---
+
+## 🧠 Concepts Practiced
+
+Throughout developing this project, I practiced and improved my understanding of:
+
+- C++ Programming Fundamentals.
+- Object-Oriented Programming (OOP).
+- Classes and Objects.
+- Constructors and Destructors.
+- Pointers and References.
+- Dynamic Memory Allocation.
+- C++ Templates.
+- Generic Programming.
+- Data Structures.
+- Recursion.
+- File Handling.
+- Problem Solving.
+
+---
+
+## 💻 Technologies
+
+- **Programming Language:** C++
+- **Programming Concepts:** OOP, Templates, Pointers, and Dynamic Memory Allocation.
+- **File Organization:** C++ Header Files (`.h`).
+
+---
+
+## 🎯 Project Purpose
+
+This project was created as part of my journey in learning C++ and improving my software development skills.
+
+My main objectives were:
+
+- Build my own classes and utility functions instead of relying entirely on ready-made solutions.
+- Implement data structures from scratch.
+- Understand the internal logic behind data structures.
+- Improve my understanding of memory management and pointers.
+- Practice Object-Oriented Programming and Templates.
+- Strengthen my logical thinking and problem-solving skills.
+- Turn theoretical programming knowledge into practical implementations.
+
+---
+
+## 🔄 Project Status
+
+This is a personal learning project that I continue to develop and improve as I gain more programming experience.
+
+---
+
+## 👨‍💻 Author
+
+**Ahmed Hicazi**  
+**Full Stack Desktop Developer**
+
+🌐 Website: [ahmedhicazi.github.io](https://ahmedhicazi.github.io)
+
+---
+
+⭐ Thanks for visiting my repository!
+
+*Built from scratch with C++ through continuous learning, experimentation, and practice.*
